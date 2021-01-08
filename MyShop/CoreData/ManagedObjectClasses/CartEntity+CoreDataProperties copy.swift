@@ -1,0 +1,20 @@
+//
+//  CartEntity+CoreDataProperties.swift
+//  
+//
+//  Created by Pavlo Sypyhin on 1/8/21.
+//
+
+import Foundation
+import CoreData
+
+
+extension CartEntity {
+
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<CartEntity> {
+        return NSFetchRequest<CartEntity>(entityName: "CartEntity")
+    }
+
+    @NSManaged public var product: ProductEntity?
+    @NSManaged public var variant: VariantEntity?
+}
